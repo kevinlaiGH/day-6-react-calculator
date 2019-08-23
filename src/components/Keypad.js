@@ -12,7 +12,7 @@ class Keypad extends Component {
         return (
             <div className="button">
 
-                {buttons.map((num) => <button onClick={e => this.props.onClick(e.target.name)}>{num}</button>)}
+                {buttons.map((num) => <button onClick={e => this.props.onClick(num)}>{num}</button>)}
             </div>
          );
     }
