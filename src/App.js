@@ -13,7 +13,6 @@ class App extends Component {
   }
 
   onClick = button => {
-    console.log(button)
     if (button === "=") {
       this.calculate()
     }
@@ -32,9 +31,8 @@ class App extends Component {
     }
   };
 
-
   calculate = () => {
-    var checkResult = ''
+    let checkResult = ''
     if (this.state.result.includes('--')) {
       checkResult = this.state.result.replace('--', '+')
     }
@@ -45,7 +43,6 @@ class App extends Component {
 
     try {
       this.setState({
-        // eslint-disable-next-line
         result: (eval(checkResult) || "") + ""
       })
     } catch (e) {
